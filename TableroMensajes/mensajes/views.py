@@ -8,3 +8,6 @@ def mensajes_recibidos(request):
     destinatario = request.GET.get('destinatario', 'María')  # Filtrar por destinatario
     mensajes = Mensaje.objects.filter(destinatario=destinatario)
     return render(request, 'mensajes/recibidos.html', {'mensajes': mensajes})
+
+def index(request):
+    return render(request, 'mensajes/index.html')

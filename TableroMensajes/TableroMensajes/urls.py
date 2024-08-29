@@ -21,4 +21,5 @@ from mensajes import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mensajes/recibidos/', views.mensajes_recibidos, name='mensajes_recibidos'),
+    path('', views.index, name="index"),
 ]
